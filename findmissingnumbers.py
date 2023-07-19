@@ -64,7 +64,7 @@ class Solution:
                 curr = numbers[i]
                 next = numbers[i + 1]
                 if(next - curr > diff):
-                     retList.append(curr + diff)
+                     retList.append(int(curr + diff))
 
             return retList
 
