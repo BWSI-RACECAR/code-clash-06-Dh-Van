@@ -59,8 +59,6 @@ class Solution:
                 if(l < diff and l != 0):
                      diff = l
 
-            print(diff)
-
             retList = []
             for i in range(len(numbers) - 1):
                 curr = numbers[i]
