@@ -51,19 +51,21 @@ class Solution:
             numbers = [*set(numbers)]
             numbers.sort()
 
-            diff = 0
-            for i in range(len(numbers) - 1):
-                curr = numbers[i]
-                next = numbers[i + 1]
+            diff = 10
+            for j in range(len(numbers) - 1):
+                curr = numbers[j]
+                next = numbers[j + 1]
                 l = next - curr
-                if(l < diff):
+                if(l < diff and l != 0):
                      diff = l
+
+            print(diff)
 
             retList = []
             for i in range(len(numbers) - 1):
                 curr = numbers[i]
                 next = numbers[i + 1]
-                if(curr-next > diff):
+                if(next - curr > diff):
                      retList.append(curr + diff)
 
             return retList
