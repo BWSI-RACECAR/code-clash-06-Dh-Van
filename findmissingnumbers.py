@@ -55,13 +55,12 @@ class Solution:
                  print("None missing")
                  return
             
-            
             #TODO: Write code below to return an int list with the solution to the prompt.
             numbers = [*set(numbers)]
             
             l = []
             for n in numbers:
-                num = math.floor(n)
+                num = math.ceil(n)
                 l.append(num)
 
             l.sort()
