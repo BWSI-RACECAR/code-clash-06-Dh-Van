@@ -42,6 +42,8 @@ Input: [3, 4, 2, 1, 6, 7, 5, 9, 10] Output:[8]
 Input: [3, 3, 3, 3, 4, 7] Output: [5, 6]
 
 """
+import math
+
 class Solution:
     def findMissingNumbers(self, numbers):
             #type numbers: list of float
@@ -51,6 +53,7 @@ class Solution:
                  return
             if(len(numbers) < 2):
                  print("None missing")
+                 return
             
             
             #TODO: Write code below to return an int list with the solution to the prompt.
@@ -58,7 +61,8 @@ class Solution:
             
             l = []
             for n in numbers:
-                l.append(int(n))
+                num = math.floor(n)
+                l.append(num)
 
             l.sort()
 
