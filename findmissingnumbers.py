@@ -46,8 +46,12 @@ class Solution:
     def findMissingNumbers(self, numbers):
             #type numbers: list of float
             #return type: list of int
-            if(numbers is None or len(numbers) == 0):
-                 return []
+            if(numbers is None):
+                 print("Invalid input")
+                 return
+            if(len(numbers) < 2):
+                 print("None missing")
+            
             
             #TODO: Write code below to return an int list with the solution to the prompt.
             numbers = [*set(numbers)]
